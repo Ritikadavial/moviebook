@@ -28,7 +28,8 @@ app.set('view engine', 'ejs');
 //app.use(express.methodOverride());
 app.use(express.static(__dirname + '/public'));
 app.use(favicon(path.join(__dirname, 'public/images/', 'favicon.ico')));
-app.use(app.router);
+
+app.use('/',routes);
 
 //app.use(express.static(__dirname + '/uploads'));
 //app.use(express.bodyParser({uploadDir:'/uploads'}));
